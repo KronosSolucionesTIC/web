@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+        <style type="text/css">
+            .fa {
+        padding: 10px;
+        font-size: 50px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+    }
+
+    .fa:hover {
+      opacity: 0.7;
+    }
+    .fa-youtube {
+      background: #bb0000;
+      color: white;
+    }
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+        </style>
+        <title>
+            Kronos Soluciones TIC - Portafolio
+        </title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+        <!--    favicon-->
+        <link href="assets/img/fav-icon.png" rel="shortcut icon" type="image/x-icon"/>
+        <!-- Bootstrap CSS -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <!-- Icon -->
+        <link href="assets/fonts/line-icons.css" rel="stylesheet" type="text/css"/>
+        <!-- Slicknav -->
+        <link href="assets/css/slicknav.css" rel="stylesheet" type="text/css"/>
+        <!-- Owl carousel -->
+        <link href="assets/css/owl.carousel.min.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/owl.theme.css" rel="stylesheet" type="text/css"/>
+        <!-- Slick Slider -->
+        <link href="assets/css/slick.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/slick-theme.css" rel="stylesheet" type="text/css"/>
+        <!-- Animate -->
+        <link href="assets/css/animate.css" rel="stylesheet" type="text/css"/>
+        <!-- Main Style -->
+        <link href="assets/css/main.css" rel="stylesheet" type="text/css"/>
+        <!-- Responsive Style -->
+        <link href="assets/css/responsive.css" rel="stylesheet" type="text/css"/>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-147768098-1">
+        </script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-147768098-1');
+        </script>
+        <script type="text/javascript">
+            function enviar(){
+    var nombre = $('#nombre').val();
+    var email = $('#email').val();
+    var mensaje = $('#mensaje').val();
+    var submit = $('#submit').val();
+
+          console.log('Nombre = '+nombre);
+          console.log('Email = '+email);
+          console.log('mensaje = '+mensaje);
+          console.log('submit = '+submit);
+
+    if(nombre != '' && email != '' && mensaje != ''){
+    $.ajax({
+          url: 'correo.php',
+          type: 'POST',
+          data: "nombre="+nombre+"&email="+email+"&mensaje="+mensaje+"&submit="+submit,
+      })
+      .done(function(data) {
+        /*muestra data actual*/
+          console.log(data);
+          console.log('Enviado?');
+          console.log(data.r);
+          estado('ok');
+      })
+      .fail(function() {
+          console.log("error");
+          estado('fallo');
+      })
+      .always(function() {
+          console.log("complete");
+      });
+    } else {
+      alert('Completa el formulario :p');
+    }
+}
+
+function estado(estado){
+  if(estado == 'ok'){
+    alert('Mensaje enviado :D');
+    $("#form_contacto")[0].reset();
+    location.reload();
+  } else {
+    alert('Mensaje no enviado :(');
+  }
+}
+        </script>
+    </head>
+    <body>
+        <!-- Header Area wrapper Starts -->
+        <header id="header-wrap">
+            <!-- Navbar Start -->
+            <nav class="navbar navbar-expand-lg fixed-top scrolling-navbar indigo">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#main-navbar" data-toggle="collapse" type="button">
+                            <span class="navbar-toggler-icon">
+                            </span>
+                            <span class="icon-menu">
+                            </span>
+                            <span class="icon-menu">
+                            </span>
+                            <span class="icon-menu">
+                            </span>
+                        </button>
+                        <a class="navbar-brand" href="index.html">
+                            <img alt="" src="assets/img/logo.png"/>
+                        </a>
+                        <a class="navbar-brand" href="https://api.whatsapp.com/send?phone=573002406185&text=Hola!%20quiero%20saber%20mas%20de%20Kronos%20Soluciones%20TIC!" target="_blank">
+                            <img alt="" src="assets/img/whatsapp.png"/>
+                        </a>
+                        +57 3002406185
+                    </div>
+                    <div class="collapse navbar-collapse" id="main-navbar">
+                        <ul class="navbar-nav mr-auto w-100 justify-content-center clearfix">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#hero-area">
+                                    Inicio
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#services">
+                                    Servicios
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#feature">
+                                    Caracteristicas
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#pricing">
+                                    Productos
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">
+                                    Contacto
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Mobile Menu Start -->
+                <ul class="mobile-menu navbar-nav">
+                    <li>
+                        <a class="page-scroll" href="#hero-area">
+                            Inicio
+                        </a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">
+                            Servicios
+                        </a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#feature">
+                            Caracterisiticas
+                        </a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#pricing">
+                            Productos
+                        </a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">
+                            Contacto
+                        </a>
+                    </li>
+                </ul>
+                <!-- Mobile Menu End -->
+            </nav>
+            <!-- Navbar End -->
+            <!-- Hero Area Start -->
+            <div class="hero-area-bg" id="hero-area">
+                <div class="overlay">
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="contents text-center">
+                                <h2 class="head-title wow fadeInUp">
+                                    Kronos Soluciones TIC
+                                </h2>
+                                <div class="header-button wow fadeInUp" data-wow-delay="0.3s">
+                                    <a class="btn btn-common" href="#contact">
+                                        Contactenos
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="img-thumb text-center wow fadeInUp" data-wow-delay="0.6s">
+                                <img alt="" class="img-fluid" src="assets/img/hero-1.png">
+                                </img>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Hero Area End -->
+        </header>
+        <!-- Header Area wrapper End -->
+        <!-- Services Section Start -->
+        <section class="section-padding" id="services">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">
+                        Servicios
+                    </h2>
+                </div>
+                <div class="row">
+                    <!-- Services item -->
+                    <div class="col-md-6 col-lg-4 col-xs-12">
+                        <div class="services-item wow fadeInRight" data-wow-delay="0.3s">
+                            <div class="icon">
+                                <i class="lni-code">
+                                </i>
+                            </div>
+                            <div class="services-content">
+                                <h3>
+                                    <a href="#">
+                                        Desarrollo de software
+                                    </a>
+                                </h3>
+                                <p>
+                                    Desarrollo de software a la medida, ejecutamos todas las fases de desarrollo , requerimientos, analisis, diseño, implementacion, con tecnologias modernas, basados en las necesidades de la organizacion...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Services item -->
+                    <div class="col-md-6 col-lg-4 col-xs-12">
+                        <div class="services-item wow fadeInRight" data-wow-delay="1.5s">
+                            <div class="icon">
+                                <i class="lni-mobile">
+                                </i>
+                            </div>
+                            <div class="services-content">
+                                <h3>
+                                    <a href="#">
+                                        Aplicaciones moviles
+                                    </a>
+                                </h3>
+                                <p>
+                                    Desarollo de aplicaciones moviles, adaptables y con lenguages modernos, ponemos tus aplicaciones en playstore...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Services item -->
+                    <div class="col-md-6 col-lg-4 col-xs-12">
+                        <div class="services-item wow fadeInRight" data-wow-delay="0.9s">
+                            <div class="icon">
+                                <i class="lni-world">
+                                </i>
+                            </div>
+                            <div class="services-content">
+                                <h3>
+                                    <a href="#">
+                                        Paginas web
+                                    </a>
+                                </h3>
+                                <p>
+                                    Analisis de procesos de la organizacion, soluciones para reducir costos, tiempos y generar mas ingresos...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Services item -->
+                    <div class="col-md-6 col-lg-4 col-xs-12">
+                        <div class="services-item wow fadeInRight" data-wow-delay="0.3s">
+                            <div class="icon">
+                                <i class="lni-cart">
+                                </i>
+                            </div>
+                            <div class="services-content">
+                                <h3>
+                                    <a href="#">
+                                        Tiendas virtuales
+                                    </a>
+                                </h3>
+                                <p>
+                                    Desarrollo de software a la medida, ejecutamos todas las fases de desarrollo , requerimientos, analisis, diseño, implementacion, con tecnologias modernas, basados en las necesidades de la organizacion...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Services item -->
+                    <div class="col-md-6 col-lg-4 col-xs-12">
+                        <div class="services-item wow fadeInRight" data-wow-delay="1.5s">
+                            <div class="icon">
+                                <i class="lni-search">
+                                </i>
+                            </div>
+                            <div class="services-content">
+                                <h3>
+                                    <a href="#">
+                                        Posicionamiento y SEO
+                                    </a>
+                                </h3>
+                                <p>
+                                    Desarollo de aplicaciones moviles, adaptables y con lenguages modernos, ponemos tus aplicaciones en playstore...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Services item -->
+                    <div class="col-md-6 col-lg-4 col-xs-12">
+                        <div class="services-item wow fadeInRight" data-wow-delay="0.9s">
+                            <div class="icon">
+                                <i class="lni-graduation">
+                                </i>
+                            </div>
+                            <div class="services-content">
+                                <h3>
+                                    <a href="#">
+                                        E-Learning
+                                    </a>
+                                </h3>
+                                <p>
+                                    Analisis de procesos de la organizacion, soluciones para reducir costos, tiempos y generar mas ingresos...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Services item -->
+                    <div class="col-md-6 col-lg-4 col-xs-12">
+                        <div class="services-item wow fadeInRight" data-wow-delay="0.3s">
+                            <div class="icon">
+                                <i class="lni-bulb">
+                                </i>
+                            </div>
+                            <div class="services-content">
+                                <h3>
+                                    <a href="#">
+                                        Imagen corporativa
+                                    </a>
+                                </h3>
+                                <p>
+                                    Desarrollo de software a la medida, ejecutamos todas las fases de desarrollo , requerimientos, analisis, diseño, implementacion, con tecnologias modernas, basados en las necesidades de la organizacion...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services Section End -->
+        <!-- Feature Section Start -->
+        <div id="feature">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div class="text-wrapper">
+                            <div>
+                                <h2 class="title-hl wow fadeInLeft" data-wow-delay="0.3s">
+                                    Caracteristicas
+                                </h2>
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6">
+                                        <div class="features-box wow fadeInLeft" data-wow-delay="0.3s">
+                                            <div class="features-icon">
+                                                <i class="lni-code">
+                                                </i>
+                                            </div>
+                                            <div class="features-content">
+                                                <h4>
+                                                    Lenguajes de programacion
+                                                </h4>
+                                                <ul>
+                                                    Se utlizan los siguientes lenguajes:
+                                                    <li>
+                                                        <i class="lni-check-mark-circle">
+                                                        </i>
+                                                        Php
+                                                    </li>
+                                                    <li>
+                                                        <i class="lni-check-mark-circle">
+                                                        </i>
+                                                        Ajax
+                                                    </li>
+                                                    <li>
+                                                        <i class="lni-check-mark-circle">
+                                                        </i>
+                                                        JavaScript
+                                                    </li>
+                                                    <li>
+                                                        <i class="lni-check-mark-circle">
+                                                        </i>
+                                                        Android
+                                                    </li>
+                                                    <li>
+                                                        <i class="lni-check-mark-circle">
+                                                        </i>
+                                                        Swift
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6">
+                                        <div class="features-box wow fadeInLeft" data-wow-delay="0.6s">
+                                            <div class="features-icon">
+                                                <i class="lni-database">
+                                                </i>
+                                            </div>
+                                            <div class="features-content">
+                                                <h4>
+                                                    Motores de base de datos
+                                                </h4>
+                                                <ul>
+                                                    Se utlizan los siguientes motores:
+                                                    <li>
+                                                        <i class="lni-check-mark-circle">
+                                                        </i>
+                                                        MySql
+                                                    </li>
+                                                    <li>
+                                                        <i class="lni-check-mark-circle">
+                                                        </i>
+                                                        PostgreSQL
+                                                    </li>
+                                                    <li>
+                                                        <i class="lni-check-mark-circle">
+                                                        </i>
+                                                        SQL server
+                                                    </li>
+                                                    <li>
+                                                        <i class="lni-check-mark-circle">
+                                                        </i>
+                                                        Access
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6">
+                                        <div class="features-box wow fadeInLeft" data-wow-delay="0.9s">
+                                            <div class="features-icon">
+                                                <i class="lni-cog">
+                                                </i>
+                                            </div>
+                                            <div class="features-content">
+                                                <h4>
+                                                    Metodologias y frameworks
+                                                </h4>
+                                                <ul>
+                                                    Se utlizan las siguientes herramientas:
+                                                    <li>
+                                                        <i class="lni-check-mark-circle">
+                                                        </i>
+                                                        POO(Programacion Orientada a Objetos)
+                                                    </li>
+                                                    <li>
+                                                        <i class="lni-check-mark-circle">
+                                                        </i>
+                                                        Boostrap
+                                                    </li>
+                                                    <li>
+                                                        <i class="lni-check-mark-circle">
+                                                        </i>
+                                                        Yii
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6">
+                                        <div class="features-box wow fadeInLeft" data-wow-delay="1.2s">
+                                            <div class="features-icon">
+                                                <i class="lni-leaf">
+                                                </i>
+                                            </div>
+                                            <div class="features-content">
+                                                <h4>
+                                                    Adaptables, ligeros, en entornos Web
+                                                </h4>
+                                                <ul>
+                                                    Caracteristicas :
+                                                    <li>
+                                                        <i class="lni-check-mark-circle">
+                                                        </i>
+                                                        Adaptable para moviles
+                                                    </li>
+                                                    <li>
+                                                        <i class="lni-check-mark-circle">
+                                                        </i>
+                                                        En entorno web
+                                                    </li>
+                                                    <li>
+                                                        <i class="lni-check-mark-circle">
+                                                        </i>
+                                                        Ficheros y Bases de datos ligeros
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 padding-none">
+                        <div class="feature-thumb wow fadeInRight" data-wow-delay="0.3s">
+                            <img alt="" src="assets/img/feature/img-1.jpg">
+                            </img>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Feature Section End -->
+        <!-- Clients Section Start -->
+        <div class="section-padding" id="clients">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">
+                        Clientes
+                    </h2>
+                </div>
+                <div class="row text-align-">
+                    <div class="col-lg-3 col-md-3 col-xs-12 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="client-item-wrapper">
+                            <a href="http://www.effortcolombia.com" target="_blank">
+                                <img alt="" class="img-fluid" src="assets/img/clients/img1.png">
+                                </img>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-xs-12 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="client-item-wrapper">
+                            <a href="https://www.ortopedicoswyw.com" target="_blank">
+                                <img alt="" class="img-fluid" src="assets/img/clients/img2.png">
+                                </img>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-xs-12 wow fadeInUp" data-wow-delay="0.9s">
+                        <div class="client-item-wrapper">
+                            <a href="http://www.bulevar.com.co/Carolina-Endara" target="_blank">
+                                <img alt="" class="img-fluid" src="assets/img/clients/img3.png">
+                                </img>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-xs-12 wow fadeInUp" data-wow-delay="1.2s">
+                        <div class="client-item-wrapper">
+                            <a href="http://www.metalicaswilliamfs.com" target="_blank">
+                                <img alt="" class="img-fluid" src="assets/img/clients/img4.png">
+                                </img>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Clients Section End -->
+        <!-- Pricing section Start -->
+        <section class="section-padding" id="pricing">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-xs-12">
+                        <div class="table wow fadeInLeft" data-wow-delay="1.2s">
+                            <div class="title">
+                                <h3>
+                                    Podium
+                                </h3>
+                            </div>
+                            <div class="pricing-header">
+                                <p class="price-value">
+                                    $500.000
+                                </p>
+                                <p>
+                                    Software para la administracion de clubes y escuelas deportivas
+                                </p>
+                            </div>
+                            <ul class="description">
+                                <li>
+                                    Registro de afiliados
+                                </li>
+                                <li>
+                                    Informe de estados de cuenta
+                                </li>
+                                <li>
+                                    Informe de ingresos y gastos
+                                </li>
+                                <li>
+                                    Muchas mas caracteristicas...
+                                </li>
+                            </ul>
+                            <a href="https://www.youtube.com/channel/UCIrbsRZXLLyssg7m-jeJhRw" target="_blank">
+                                Tutoriales
+                            </a>
+                            |
+                            <a href="https://www.youtube.com/channel/UCIrbsRZXLLyssg7m-jeJhRw" target="_blank">
+                                Comprar
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-xs-12 active">
+                        <div class="table wow fadeInUp" data-wow-delay="1.2s" id="active-tb">
+                            <div class="title">
+                                <h3>
+                                    Blue
+                                </h3>
+                            </div>
+                            <div class="pricing-header">
+                                <p class="price-value">
+                                    $500.000
+                                </p>
+                                <p>
+                                    Software de facturacion POS, control de inventarios, cierres de caja
+                                </p>
+                            </div>
+                            <ul class="description">
+                                <li>
+                                    Inventarios
+                                </li>
+                                <li>
+                                    Facturacion POS
+                                </li>
+                                <li>
+                                    Cierres de caja
+                                </li>
+                                <li>
+                                    Muchas mas caracteristicas...
+                                </li>
+                            </ul>
+                            <a href="https://www.youtube.com/channel/UCIrbsRZXLLyssg7m-jeJhRw" target="_blank">
+                                Tutoriales
+                            </a>
+                            |
+                            <a href="https://www.youtube.com/channel/UCIrbsRZXLLyssg7m-jeJhRw" target="_blank">
+                                Comprar
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-xs-12">
+                        <div class="table wow fadeInRight" data-wow-delay="1.2s">
+                            <div class="title">
+                                <h3>
+                                    A la medida
+                                </h3>
+                            </div>
+                            <div class="pricing-header">
+                                <p class="price-value">
+                                    $------
+                                </p>
+                                <p>
+                                    Desarrollo de software a la medida, basado en las necesidades de la organizacion
+                                </p>
+                            </div>
+                            <ul class="description">
+                                <li>
+                                    Levantamiento de requerimientos
+                                </li>
+                                <li>
+                                    Analisis y diseño
+                                </li>
+                                <li>
+                                    Desarrollo e implementacion
+                                </li>
+                                <li>
+                                    Muchas mas caracterisiticas...
+                                </li>
+                            </ul>
+                            <a href="https://www.youtube.com/channel/UCIrbsRZXLLyssg7m-jeJhRw" target="_blank">
+                                Cotizar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Pricing Table Section End -->
+        <!-- Contact Section Start -->
+        <section class="section-padding" id="contact">
+            <div align="center" class="container wow fadeIn animated" style="visibility: visible;">
+                <h4 class="wow fadeInUp" data-wow-delay="0.3s">
+                    Contactenos
+                </h4>
+                <p class="wow fadeInUp" data-wow-delay="0.6s">
+                    Si tienes alguna duda, quieres cotizar algun servicio y/o producto, o solamente quieres decir "Hola" completa el siguiente formulario y te responderemos lo mas pronto posible...
+                </p>
+                <form action="" class="form-horizontal contactForm" id="form_contacto" method="post" name="form_contacto" role="form">
+                    <div class="col-md-offset-2 col-md-8">
+                        <div class="form-group">
+                            <input class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required="required" type="text"/>
+                            <div class="validation">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-offset-2 col-md-8">
+                        <div class="form-group">
+                            <input class="form-control" data-msg="Correo vacio o no valido" data-rule="email" id="email" name="email" placeholder="Tu Email" required="required" type="email"/>
+                            <div class="validation">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-offset-2 col-md-8">
+                        <div class="form-group">
+                            <textarea class="form-control" data-msg="29/5000
+Por favor escribe algo para nosotros" data-rule="required" id="mensaje" name="mensaje" placeholder="Mensaje" required="required" rows="5">
+                            </textarea>
+                            <div class="validation">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-8">
+                        <button class="form-control" id="submit" name="submit" onclick="enviar();" type="submit" value="ok">
+                            Enviar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section End -->
+        <!-- Footer Section Start -->
+        <footer class="footer-area section-padding" id="footer">
+            <div class="container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 wow fadeInUp" data-wow-delay="0.6s">
+                            <h3 class="footer-titel">
+                                Direccion
+                            </h3>
+                            <iframe allowfullscreen="" frameborder="0" height="300" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d994.2024583224344!2d-74.19949017086331!3d4.627991299789873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9e0a38d9f863%3A0xdac127dc995af0e4!2sCl.+70+Sur+%2391-2+a+91-88%2C+Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1543241813636" style="border:0" width="400">
+                            </iframe>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 wow fadeInUp" data-wow-delay="0.8s">
+                            <h3 class="footer-titel">
+                                Contactenos
+                            </h3>
+                            <ul>
+                                <li>
+                                    Direccion: Calle 70 No 91 51 Sur
+                                </li>
+                                <li>
+                                    Correo: kronossolucionestic@gmail.com
+                                </li>
+                                <li>
+                                    Web : www.kronossolucionestic.com
+                                </li>
+                                <li>
+                                    Whatasapp: 3002406185
+                                </li>
+                            </ul>
+                            <a class="fa fa-youtube" href="http://www.youtube.com/KronosSolucionesTIC" target="_blank">
+                            </a>
+                            <a>
+                                KronosSolucionesTIC
+                                <br>
+                                    <a class="fa fa-facebook" href="http://www.facebook.com/KronosSolucionesTIC" target="_blank">
+                                    </a>
+                                    <a>
+                                        KronosSolucionesTIC
+                                        <br>
+                                        </br>
+                                    </a>
+                                </br>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer Section End -->
+        <section id="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>
+                            Copyright © 2018 Kronos Soluciones TIC | Desarollo por
+                            <a href="http://www.kronossolucionestic.com/">
+                                Kronos soluciones TIC
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Go to Top Link -->
+        <a class="back-to-top" href="#">
+            <i class="lni-arrow-up">
+            </i>
+        </a>
+        <!-- Preloader -->
+        <div id="preloader">
+            <div class="loader" id="loader-1">
+            </div>
+        </div>
+        <!-- End Preloader -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="assets/js/jquery-min.js">
+        </script>
+        <script src="assets/js/popper.min.js">
+        </script>
+        <script src="assets/js/bootstrap.min.js">
+        </script>
+        <script src="assets/js/owl.carousel.min.js">
+        </script>
+        <script src="assets/js/slick.min.js">
+        </script>
+        <script src="assets/js/wow.js">
+        </script>
+        <script src="assets/js/jquery.nav.js">
+        </script>
+        <script src="assets/js/scrolling-nav.js">
+        </script>
+        <script src="assets/js/jquery.easing.min.js">
+        </script>
+        <script src="assets/js/jquery.slicknav.js">
+        </script>
+        <script src="assets/js/main.js">
+        </script>
+    </body>
+</html>
