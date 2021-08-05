@@ -1,22 +1,16 @@
 <?php
-if (isset($_POST['nombre'])) {
-    $nombre  = $_POST['nombre'];
-    $email   = $_POST['email'];
-    $mensaje = $_POST['mensaje'];
-    $para    = 'kronossolucionestic@gmail.com';
-    $titulo  = 'Enviado desde el sitio web';
-    $submit  = $_POST['submit'];
+if (isset($_POST['ip'])) {
+    $ip  = $_POST['ip'];
+    $fecha  = $_POST['fecha'];
     $r       = '';
 
-    $msjCorreo = "Nombre: $nombre\n E-Mail: $email\n Mensaje:\n $mensaje";
-}
+    $msjCorreo = "IP:\n $ip \n Fecha:\n $fecha";
 
-if (isset($_POST['submit'])) {
-    if (mail($para, $titulo, $msjCorreo)) {
-        $r = 'El mensaje se ha enviado';
+    if (mail("kronossolucionestic@gmail.com", "IP", $msjCorreo)) {
+        $r = '';
     } else {
-        $r = 'Falló el envio';
+        $r = '';
     }
-}
 
-echo json_encode($r); //imprime el json
+    echo json_encode($r); //imprime el json
+}
