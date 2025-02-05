@@ -331,25 +331,6 @@ function estado(estado){
                 <div class="row">
                     <!-- Services item -->
                     <div class="col-md-6 col-lg-4 col-xs-12">
-                        <div class="services-item wow fadeInRight" data-wow-delay="0.3s">
-                            <div class="icon">
-                                <i class="lni-bulb">
-                                </i>
-                            </div>
-                            <div class="services-content">
-                                <h3>
-                                    <a href="#">
-                                        Imagen corporativa
-                                    </a>
-                                </h3>
-                                <p>
-                                    &iexcl;Todo entra por los ojos! te ofrecemos un completo stand de servicios para la imagen corporativa que merece la organizaci&aacute;n; dise&ntilde;o de logo, slogan, tarjetas de presentaci&oacute;n, volantes, post para redes sociales, im&aacute;genes para portadas de facebook, youtube, instagram, videos corporativos, y en general todo lo relacionado a tu imagen online integrada.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Services item -->
-                    <div class="col-md-6 col-lg-4 col-xs-12">
                         <div class="services-item wow fadeInRight" data-wow-delay="1.5s">
                             <div class="icon">
                                 <i class="lni-user">
@@ -363,25 +344,6 @@ function estado(estado){
                                 </h3>
                                 <p>
                                     Realizamos las fases de levantamiento de perfil, selecci&oacute;n de personal, pruebas de conocimiento t&eacute;cnico, presentaci&oacute;n terna, garant&iacute;a de los procesos de selecci&oacute;n, tiempos de entrega desde 4 d&iacute;as dependiendo el perfil.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Services item -->
-                    <div class="col-md-6 col-lg-4 col-xs-12">
-                        <div class="services-item wow fadeInRight" data-wow-delay="0.9s">
-                            <div class="icon">
-                                <i class="lni-display">
-                                </i>
-                            </div>
-                            <div class="services-content">
-                                <h3>
-                                    <a href="#">
-                                        Mantenimiento de computadores
-                                    </a>
-                                </h3>
-                                <p>
-                                    Sabemos que es importante tener un equipo en estado &oacute;ptimo, para as&iacute; poder aprovechar al m&aacute;ximo del potencial que nos ofrece, por eso es vital realizar el mantenimiento del mismo tanto de manera preventiva o correctiva.
                                 </p>
                             </div>
                         </div>
@@ -425,12 +387,17 @@ function estado(estado){
                                                     <li>
                                                         <i class="lni-check-mark-circle">
                                                         </i>
-                                                        IONIC
+                                                        JAVA
                                                     </li>
                                                     <li>
                                                         <i class="lni-check-mark-circle">
                                                         </i>
-                                                        Ajax
+                                                        Node.js
+                                                    </li>
+                                                    <li>
+                                                        <i class="lni-check-mark-circle">
+                                                        </i>
+                                                        Typescript
                                                     </li>
                                                     <li>
                                                         <i class="lni-check-mark-circle">
@@ -447,6 +414,16 @@ function estado(estado){
                                                         </i>
                                                         Swift
                                                     </li>
+                                                    <li>
+                                                        <i class="lni-check-mark-circle">
+                                                        </i>
+                                                        Flutter
+                                                    </li>
+                                                    <li>
+                                                        <i class="lni-check-mark-circle">
+                                                        </i>
+                                                        IONIC
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -459,7 +436,7 @@ function estado(estado){
                                             </div>
                                             <div class="features-content">
                                                 <h4>
-                                                    Motores de base de datos
+                                                    Bases de datos
                                                 </h4>
                                                 <ul>
                                                     <li>
@@ -480,7 +457,12 @@ function estado(estado){
                                                     <li>
                                                         <i class="lni-check-mark-circle">
                                                         </i>
-                                                        Access
+                                                        MongoDB
+                                                    </li>
+                                                    <li>
+                                                        <i class="lni-check-mark-circle">
+                                                        </i>
+                                                        Dynamo
                                                     </li>
                                                 </ul>
                                             </div>
@@ -534,23 +516,23 @@ function estado(estado){
                                             </div>
                                             <div class="features-content">
                                                 <h4>
-                                                    Adaptables, ligeros, en entornos Web
+                                                    Otras caracteristicas
                                                 </h4>
                                                 <ul>
                                                     <li>
                                                         <i class="lni-check-mark-circle">
                                                         </i>
-                                                        Adaptable para moviles (Responsive)
+                                                        Responsive (Adaptables)
                                                     </li>
                                                     <li>
                                                         <i class="lni-check-mark-circle">
                                                         </i>
-                                                        En entorno web (Cliente/Servidor)
+                                                        Patrones de diseño
                                                     </li>
                                                     <li>
                                                         <i class="lni-check-mark-circle">
                                                         </i>
-                                                        Ficheros y Bases de datos ligeros
+                                                        Arquitecturas limpias
                                                     </li>
                                                 </ul>
                                             </div>
@@ -603,10 +585,10 @@ function estado(estado){
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-3 col-xs-12 wow fadeInUp" data-wow-delay="1.2s">
+                    <div class="col-lg-3 col-md-3 col-xs-12 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="client-item-wrapper">
-                            <a href="http://www.carpinteriaenaluminioyvidrio.com" target="_blank">
-                                <img alt="" class="img-fluid" src="assets/img/clients/carpinteriaenaluminioyvidrio.png">
+                            <a href="https://www.chegolazo.com/" target="_blank">
+                                <img alt="" class="img-fluid" src="assets/img/clients/chegolazo.png">
                                 </img>
                             </a>
                         </div>
@@ -616,10 +598,10 @@ function estado(estado){
                     <div class="col-12">&nbsp;</div>
                 </div>
                 <div class="row text-align-">
-                    <div class="col-lg-3 col-md-3 col-xs-12 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="col-lg-3 col-md-3 col-xs-12 wow fadeInUp" data-wow-delay="0.6s">
                         <div class="client-item-wrapper">
-                            <a href="https://www.chegolazo.com/" target="_blank">
-                                <img alt="" class="img-fluid" src="assets/img/clients/chegolazo.png">
+                            <a href="https://www.mentum.group/" target="_blank">
+                                <img alt="" class="img-fluid" src="assets/img/clients/mentum.png">
                                 </img>
                             </a>
                         </div>
@@ -632,51 +614,6 @@ function estado(estado){
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-3 col-xs-12 wow fadeInUp" data-wow-delay="0.9s">
-                        <div class="client-item-wrapper">
-                            <a href="https://instantmailmensajeria.com/" target="_blank">
-                                <img alt="" class="img-fluid" src="assets/img/clients/instantmail.png">
-                                </img>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-xs-12 wow fadeInUp" data-wow-delay="1.2s">
-                        <div class="client-item-wrapper">
-                            <a href="https://www.academiaipv6.net/pagos/" target="_blank">
-                                <img alt="" class="img-fluid" src="assets/img/clients/academiaipv6.png">
-                                </img>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">&nbsp;</div>
-                </div>
-                <div class="row text-align-">
-                    <div class="col-lg-3 col-md-3 col-xs-12 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="client-item-wrapper">
-                            <a href="https://www.luckywrite.com/" target="_blank">
-                                <img alt="" class="img-fluid" src="assets/img/clients/luckywrite.png">
-                                </img>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-xs-12 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="client-item-wrapper">
-                            <a href="https://www.mentum.group/" target="_blank">
-                                <img alt="" class="img-fluid" src="assets/img/clients/mentum.png">
-                                </img>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-xs-12 wow fadeInUp" data-wow-delay="0.9s">
-                        <div class="client-item-wrapper">
-                            <a href="https://www.agregadosgeoda.com/" target="_blank">
-                                <img alt="" class="img-fluid" src="assets/img/clients/agregadosgeoda.png">
-                                </img>
-                            </a>
-                        </div>
-                    </div>
                     <div class="col-lg-3 col-md-3 col-xs-12 wow fadeInUp" data-wow-delay="1.2s">
                         <div class="client-item-wrapper">
                             <a href="https://www.neuronabebe.com/" target="_blank">
@@ -685,31 +622,10 @@ function estado(estado){
                             </a>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">&nbsp;</div>
-                </div>
-                <div class="row text-align-">
                     <div class="col-lg-3 col-md-3 col-xs-12 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="client-item-wrapper">
                             <a href="https://www.facebook.com/novaeventsoficial/" target="_blank">
                                 <img alt="" class="img-fluid" src="assets/img/clients/novaevents.png">
-                                </img>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-xs-12 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="client-item-wrapper">
-                            <a href="https://solucionestcs.com/" target="_blank">
-                                <img alt="" class="img-fluid" src="assets/img/clients/solucionestcs.png">
-                                </img>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-xs-12 wow fadeInUp" data-wow-delay="0.9s">
-                        <div class="client-item-wrapper">
-                            <a href="https://www.yelroy.com/" target="_blank">
-                                <img alt="" class="img-fluid" src="assets/img/clients/yelroy.png">
                                 </img>
                             </a>
                         </div>
@@ -781,7 +697,7 @@ function estado(estado){
         <div class="row">
             <div class="col-md-12">
                 <p>
-                    Copyright &copy; 2021 Kronos Soluciones TIC SAS | Desarollo por
+                    Copyright &copy; <?php echo date("Y"); ?> Kronos Soluciones TIC SAS | Desarollo por
                     <a href="http://www.kronossolucionestic.com/">
                         Kronos soluciones TIC SAS
                     </a>
